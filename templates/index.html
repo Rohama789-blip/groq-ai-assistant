@@ -1,0 +1,358 @@
+```html
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Groq AI Assistant</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+<div class="app-container">
+
+
+    <!-- =================================================
+         SIDEBAR
+    ================================================== -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                🤖
+            </div>
+
+            <div>
+
+                <h2>
+                    Groq Assistant
+                </h2>
+
+                <p>
+                    AI Knowledge Assistant
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="sidebar-section">
+
+            <label>
+                CHAT MODE
+            </label>
+
+
+            <button
+                class="mode-btn active"
+                data-mode="basic"
+            >
+
+                <span>💬</span>
+
+                Basic Chat
+
+            </button>
+
+
+            <button
+                class="mode-btn"
+                data-mode="rag"
+            >
+
+                <span>📚</span>
+
+                RAG Chat
+
+            </button>
+
+        </div>
+
+
+        <div class="sidebar-section">
+
+            <label>
+                MODEL
+            </label>
+
+
+            <div class="model-box">
+
+                <span class="status-dot"></span>
+
+                <span>
+                    Groq AI
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <button
+            id="clearChat"
+            class="clear-btn"
+        >
+
+            🗑️ Clear Conversation
+
+        </button>
+
+
+        <div class="sidebar-bottom">
+
+            <p>
+                ⚡ Fast AI Responses
+            </p>
+
+            <p>
+                📚 Knowledge Based
+            </p>
+
+            <p>
+                🔒 Simple & Secure
+            </p>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =================================================
+         MAIN CONTENT
+    ================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- HEADER -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>
+                    Groq AI Assistant
+                </h1>
+
+                <p id="modeDescription">
+
+                    Ask anything and have a natural AI
+                    conversation.
+
+                </p>
+
+            </div>
+
+
+            <div class="online-status">
+
+                <span></span>
+
+                Online
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             WELCOME SCREEN
+        ================================================== -->
+
+        <section
+            id="welcomeScreen"
+            class="welcome-screen"
+        >
+
+            <div class="welcome-icon">
+                🤖
+            </div>
+
+
+            <h2>
+                How can I help you today?
+            </h2>
+
+
+            <p>
+                Ask a question or choose an example below.
+            </p>
+
+
+            <!-- FEATURES -->
+
+            <div class="feature-grid">
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        ⚡
+                    </div>
+
+                    <h3>
+                        Fast
+                    </h3>
+
+                    <p>
+                        Get quick AI-powered responses
+                        using Groq.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        🧠
+                    </div>
+
+                    <h3>
+                        Smart
+                    </h3>
+
+                    <p>
+                        Ask questions and get intelligent
+                        answers.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        📚
+                    </div>
+
+                    <h3>
+                        RAG
+                    </h3>
+
+                    <p>
+                        Ask questions directly from your
+                        knowledge document.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- EXAMPLES -->
+
+            <div class="examples">
+
+
+                <button class="example-btn">
+                    Explain artificial intelligence
+                </button>
+
+
+                <button class="example-btn">
+                    What is machine learning?
+                </button>
+
+
+                <button class="example-btn">
+                    Give me Python project ideas
+                </button>
+
+
+                <button class="example-btn">
+                    Explain RAG in simple words
+                </button>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CHAT
+        ================================================== -->
+
+        <section
+            id="chatContainer"
+            class="chat-container"
+        >
+
+        </section>
+
+
+        <!-- =================================================
+             INPUT
+        ================================================== -->
+
+        <div class="input-area">
+
+
+            <div class="input-wrapper">
+
+
+                <textarea
+                    id="messageInput"
+                    placeholder="Type your message here..."
+                    rows="1"
+                ></textarea>
+
+
+                <button
+                    id="sendBtn"
+                    class="send-btn"
+                >
+
+                    ➤
+
+                </button>
+
+
+            </div>
+
+
+            <p class="input-note">
+
+                AI can make mistakes.
+                Verify important information.
+
+            </p>
+
+
+        </div>
+
+
+    </main>
+
+</div>
+
+
+<script
+    src="{{ url_for('static', filename='script.js') }}"
+></script>
+
+</body>
+
+</html>
+```
