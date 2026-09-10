@@ -10,7 +10,6 @@
 
 🚀 **Firebase Hosting:**
 `https://grok-project-rk.web.app/`
-
 ---
 
 ## ✨ Features
