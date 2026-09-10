@@ -8,8 +8,9 @@
 
 ## 🌐 Live Demo
 
-🚀 **Firebase Hosting:**
-`https://grok-project-rk.web.app/`
+🚀 **Live Website:**  
+[Open Groq AI Assistant](https://grok-project-rk.web.app/)
+
 ---
 
 ## ✨ Features
