@@ -1,4 +1,4 @@
-```html
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -16,7 +16,7 @@
 
     <link
         rel="stylesheet"
-        href="{{ url_for('static', filename='style.css') }}"
+        href="/static/style.css"
     >
 
 </head>
@@ -348,11 +348,12 @@
 </div>
 
 
-<script
-    src="{{ url_for('static', filename='script.js') }}"
-></script>
+
+<script src="/static/script.js"></script>
+
+
 
 </body>
 
 </html>
-```
+
